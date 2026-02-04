@@ -15,6 +15,7 @@ export function HeroSection() {
           src="https://images.unsplash.com/photo-1769117617135-0d6bb3bbf240?w=1920&q=80"
           alt="Abstract art"
           fill
+          sizes="100vw"
           className="object-cover opacity-20"
           priority
         />
