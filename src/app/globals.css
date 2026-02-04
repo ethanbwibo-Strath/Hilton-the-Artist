@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors */
+  --color-background: #FFFFFF;
+  --color-background-off: #FAFAFA;
+  --color-background-soft: #F4F4F5;
+  --color-foreground: #18181B;
+  --color-foreground-secondary: #52525B;
+  --color-foreground-muted: #A1A1AA;
+  --color-accent: #18181B;
+  --color-accent-highlight: #A83232;
+  
+  /* Fonts */
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-manrope);
+  --font-accent: var(--font-cormorant);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Global Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-foreground-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-foreground-secondary);
+}
+
+/* Typography utilities */
+.heading-serif {
+  font-family: var(--font-heading), Georgia, serif;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.body-sans {
+  font-family: var(--font-body), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+.accent-italic {
+  font-family: var(--font-accent), Georgia, serif;
+  font-style: italic;
+}
+
+/* Transitions */
+.transition-base {
+  transition-property: opacity, transform, background-color, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
