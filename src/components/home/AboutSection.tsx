@@ -20,6 +20,7 @@ export function AboutSection() {
               src="https://images.unsplash.com/photo-1608146145692-0583f7d6bfdb?w=800&q=80"
               alt="Artist in studio"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </motion.div>
