@@ -41,7 +41,7 @@ export function Footer() {
             <p className="text-xs uppercase tracking-wider text-background/50 mb-4">Connect</p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/hilton_the_artist?g=5#"
                 className="text-background/70 hover:text-background transition-colors"
                 aria-label="Instagram"
                 data-testid="social-instagram"
@@ -64,6 +64,15 @@ export function Footer() {
               >
                 <Mail size={20} />
               </a>
+
+              <a 
+                aria-label="Business Number"
+                className="text-background/70 hover:text-background transition-colors text-sm"
+                data-testid="business-number"
+              >
+                +254 758 023 753
+              </a>
+
             </div>
           </div>
         </div>
