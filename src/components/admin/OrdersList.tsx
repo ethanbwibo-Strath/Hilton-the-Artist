@@ -6,7 +6,7 @@ import { toast } from 'sonner'
 import { createClient } from '@/lib/supabase/client'
 import { Button } from '@/components/ui/Button'
 import { formatPrice, formatDate, cn } from '@/lib/utils'
-import { Eye, ChevronDown } from 'lucide-react'
+import { Eye, ChevronDown, Calendar, Save } from 'lucide-react'
 import type { Order } from '@/types'
 
 interface OrdersListProps {
@@ -26,6 +26,8 @@ export function OrdersList({ orders }: OrdersListProps) {
   const router = useRouter()
   const [expandedOrder, setExpandedOrder] = useState<string | null>(null)
   const [updatingId, setUpdatingId] = useState<string | null>(null)
+  const [editingCompletion, setEditingCompletion] = useState<string | null>(null)
+  const [completionDate, setCompletionDate] = useState<string>('')
 
   const handleStatusChange = async (orderId: string, newStatus: string) => {
     setUpdatingId(orderId)
@@ -42,6 +44,30 @@ export function OrdersList({ orders }: OrdersListProps) {
       toast.success('Status updated')
       router.refresh()
     }
+    setUpdatingId(null)
+  }
+
+  const handleEditCompletion = (order: Order) => {
+    setEditingCompletion(order.id)
+    setCompletionDate(order.estimated_completion || '')
+  }
+
+  const handleSaveCompletion = async (orderId: string) => {
+    setUpdatingId(orderId)
+    const supabase = createClient()
+
+    const { error } = await supabase
+      .from('orders')
+      .update({ estimated_completion: completionDate || null })
+      .eq('id', orderId)
+
+    if (error) {
+      toast.error('Failed to update completion date')
+    } else {
+      toast.success('Completion date updated')
+      router.refresh()
+    }
+    setEditingCompletion(null)
     setUpdatingId(null)
   }
 
@@ -133,12 +159,44 @@ export function OrdersList({ orders }: OrdersListProps) {
                         <p className="text-xs uppercase tracking-wider text-foreground-muted mb-1">Order ID</p>
                         <p className="text-sm font-mono break-all">{order.id}</p>
                       </div>
+                      
+                      {/* Estimated Completion - Editable */}
                       <div>
                         <p className="text-xs uppercase tracking-wider text-foreground-muted mb-1">Est. Completion</p>
-                        <p className="text-sm">
-                          {order.estimated_completion ? formatDate(order.estimated_completion) : 'Not set'}
-                        </p>
+                        {editingCompletion === order.id ? (
+                          <div className="flex items-center gap-2">
+                            <input
+                              type="date"
+                              value={completionDate}
+                              onChange={(e) => setCompletionDate(e.target.value)}
+                              className="px-2 py-1 text-sm border border-foreground-muted/30 rounded-sm focus:outline-none focus:border-foreground"
+                              data-testid={`completion-date-input-${order.id}`}
+                            />
+                            <button
+                              onClick={() => handleSaveCompletion(order.id)}
+                              disabled={updatingId === order.id}
+                              className="p-1 text-green-600 hover:bg-green-50 rounded-sm transition-colors"
+                              data-testid={`save-completion-btn-${order.id}`}
+                            >
+                              <Save size={16} />
+                            </button>
+                          </div>
+                        ) : (
+                          <div className="flex items-center gap-2">
+                            <p className="text-sm">
+                              {order.estimated_completion ? formatDate(order.estimated_completion) : 'Not set'}
+                            </p>
+                            <button
+                              onClick={() => handleEditCompletion(order)}
+                              className="p-1 text-foreground-muted hover:text-foreground hover:bg-background rounded-sm transition-colors"
+                              data-testid={`edit-completion-btn-${order.id}`}
+                            >
+                              <Calendar size={14} />
+                            </button>
+                          </div>
+                        )}
                       </div>
+
                       {order.special_instructions && (
                         <div className="md:col-span-3">
                           <p className="text-xs uppercase tracking-wider text-foreground-muted mb-1">Special Instructions</p>
