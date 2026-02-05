@@ -8,9 +8,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="heading-serif text-2xl mb-4">Hilton Art</h3>
+            <h3 className="heading-serif text-2xl mb-4">Hilton the Artist</h3>
             <p className="text-background/70 text-sm leading-relaxed">
-              Contemporary visual art exploring the boundaries between emotion and abstraction.
+              Exploring the boundless beauty of art 🎨🌟
             </p>
           </div>
 
@@ -70,7 +70,7 @@ export function Footer() {
 
         <div className="border-t border-background/10 mt-12 pt-8">
           <p className="text-center text-background/50 text-xs">
-            © {new Date().getFullYear()} Hilton Art. All rights reserved.
+            © {new Date().getFullYear()} Hilton the Artist. All rights reserved.
           </p>
         </div>
       </div>

@@ -23,7 +23,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Hilton Art | Contemporary Visual Art",
+  title: "Hilton the Artist | Artist",
   description: "Discover the captivating artwork of Hilton. Original paintings, commissions, and fine art prints.",
 };
 

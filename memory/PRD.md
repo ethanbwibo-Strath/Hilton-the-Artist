@@ -1,4 +1,4 @@
-# Hilton Art - Visual Artist Portfolio
+# Hilton the Artist - Visual Artist Portfolio
 
 ## Original Problem Statement
 Build a full-stack web application for a professional visual artist using Next.js (App Router, TypeScript), Supabase (PostgreSQL database, Auth, Storage), Tailwind CSS. The application includes a public portfolio and a protected admin dashboard.

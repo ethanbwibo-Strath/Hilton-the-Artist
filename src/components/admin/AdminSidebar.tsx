@@ -17,7 +17,7 @@ export function AdminSidebar() {
   return (
     <aside className="w-64 bg-foreground text-background min-h-screen p-6" data-testid="admin-sidebar">
       <Link href="/" className="flex items-center gap-2 mb-12">
-        <span className="heading-serif text-xl">Hilton Art</span>
+        <span className="heading-serif text-xl">Hilton the Artist</span>
       </Link>
 
       <nav>

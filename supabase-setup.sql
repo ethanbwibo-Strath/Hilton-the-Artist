@@ -1,4 +1,4 @@
--- Supabase Setup Script for Hilton Art
+-- Supabase Setup Script for Hilton the Artist
 -- Run this in Supabase SQL Editor (Dashboard > SQL Editor)
 
 -- Enable UUID extension if not already enabled

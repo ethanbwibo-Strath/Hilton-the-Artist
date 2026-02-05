@@ -32,7 +32,7 @@ export function HeroSection() {
               transition={{ duration: 0.5 }}
               className="text-sm uppercase tracking-[0.3em] text-foreground-secondary mb-6"
             >
-              Contemporary Visual Art
+              Artist
             </motion.p>
             
             <motion.h1
@@ -42,7 +42,7 @@ export function HeroSection() {
               className="heading-serif text-6xl md:text-7xl lg:text-8xl mb-8"
             >
               Hilton<br />
-              <span className="accent-italic text-foreground-secondary">Art</span>
+              <span className="accent-italic text-foreground-secondary">the Artist</span>
             </motion.h1>
 
             <motion.p
@@ -51,8 +51,8 @@ export function HeroSection() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="text-lg md:text-xl text-foreground-secondary max-w-xl mb-12 leading-relaxed"
             >
-              Exploring the boundaries between emotion and abstraction. 
-              Each piece tells a story waiting to be discovered.
+              Exploring the boundless beauty of art 🎨🌟 
+              Creating unique masterpieces that inspire and captivate.
             </motion.p>
 
             <motion.div
