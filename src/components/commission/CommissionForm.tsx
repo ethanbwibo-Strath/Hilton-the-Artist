@@ -200,7 +200,7 @@ export function CommissionForm() {
         id="estimated_price"
         name="estimated_price"
         type="number"
-        label="Your Budget (USD) - Optional"
+        label="Your Budget (KES) - Optional"
         placeholder="1000"
         value={formData.estimated_price}
         onChange={handleInputChange}

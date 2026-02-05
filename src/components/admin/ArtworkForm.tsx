@@ -20,11 +20,17 @@ interface ArtworkFormProps {
 
 const categoryOptions = [
   { value: '', label: 'Select category' },
-  { value: 'Abstract', label: 'Abstract' },
   { value: 'Portrait', label: 'Portrait' },
+  { value: 'Charcoal', label: 'Charcoal' },
+  { value: 'Color Pencil', label: 'Color Pencil' },
+  { value: 'Oil Painting', label: 'Oil Painting' },
+  { value: 'Acrylic Painting', label: 'Acrylic Painting' },
+  { value: 'Watercolor', label: 'Watercolor' },
+  { value: 'Abstract', label: 'Abstract' },
   { value: 'Landscape', label: 'Landscape' },
   { value: 'Still Life', label: 'Still Life' },
   { value: 'Mixed Media', label: 'Mixed Media' },
+  
 ]
 
 const availabilityOptions = [
@@ -238,7 +244,7 @@ export function ArtworkForm({ artwork }: ArtworkFormProps) {
         id="price"
         name="price"
         type="number"
-        label="Price (USD)"
+        label="Price (KES))"
         placeholder="1000"
         value={formData.price}
         onChange={handleInputChange}

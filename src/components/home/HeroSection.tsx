@@ -52,6 +52,7 @@ export function HeroSection() {
               className="text-lg md:text-xl text-foreground-secondary max-w-xl mb-12 leading-relaxed"
             >
               Exploring the boundless beauty of art 🎨🌟 
+              <br/>
               Creating unique masterpieces that inspire and captivate.
             </motion.p>
 
