@@ -14,8 +14,14 @@ import { v4 as uuidv4 } from 'uuid'
 
 const artworkTypes = [
   { value: '', label: 'Select artwork type' },
-  { value: 'Abstract', label: 'Abstract' },
+  { value: '', label: 'Select category' },
   { value: 'Portrait', label: 'Portrait' },
+  { value: 'Charcoal', label: 'Charcoal' },
+  { value: 'Color Pencil', label: 'Color Pencil' },
+  { value: 'Oil Painting', label: 'Oil Painting' },
+  { value: 'Acrylic Painting', label: 'Acrylic Painting' },
+  { value: 'Watercolor', label: 'Watercolor' },
+  { value: 'Abstract', label: 'Abstract' },
   { value: 'Landscape', label: 'Landscape' },
   { value: 'Still Life', label: 'Still Life' },
   { value: 'Mixed Media', label: 'Mixed Media' },
@@ -24,10 +30,10 @@ const artworkTypes = [
 
 const sizeOptions = [
   { value: '', label: 'Select size' },
-  { value: 'Small (up to 12x12")', label: 'Small (up to 12x12")' },
-  { value: 'Medium (12x12" - 24x24")', label: 'Medium (12x12" - 24x24")' },
-  { value: 'Large (24x24" - 48x48")', label: 'Large (24x24" - 48x48")' },
-  { value: 'Extra Large (48x48"+)', label: 'Extra Large (48x48"+)' },
+  { value: 'Small (A6)', label: 'Small (A6)' },
+  { value: 'Medium (A5)', label: 'Medium (A5)' },
+  { value: 'Large (A4)', label: 'Large (A4)' },
+  { value: 'Extra Large (A3)', label: 'Extra Large (A3)' },
   { value: 'Custom', label: 'Custom Size' },
 ]
 
@@ -200,7 +206,7 @@ export function CommissionForm() {
         id="estimated_price"
         name="estimated_price"
         type="number"
-        label="Your Budget (USD) - Optional"
+        label="Your Budget (KES) - Optional"
         placeholder="1000"
         value={formData.estimated_price}
         onChange={handleInputChange}

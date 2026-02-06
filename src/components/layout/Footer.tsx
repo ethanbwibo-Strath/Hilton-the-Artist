@@ -8,9 +8,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="heading-serif text-2xl mb-4">Hilton Art</h3>
+            <h3 className="heading-serif text-2xl mb-4">Hilton the Artist</h3>
             <p className="text-background/70 text-sm leading-relaxed">
-              Contemporary visual art exploring the boundaries between emotion and abstraction.
+              Exploring the boundless beauty of art 🎨🌟
             </p>
           </div>
 
@@ -41,7 +41,7 @@ export function Footer() {
             <p className="text-xs uppercase tracking-wider text-background/50 mb-4">Connect</p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/hilton_the_artist?g=5#"
                 className="text-background/70 hover:text-background transition-colors"
                 aria-label="Instagram"
                 data-testid="social-instagram"
@@ -64,13 +64,22 @@ export function Footer() {
               >
                 <Mail size={20} />
               </a>
+
+              <a 
+                aria-label="Business Number"
+                className="text-background/70 hover:text-background transition-colors text-sm"
+                data-testid="business-number"
+              >
+                +254 758 023 753
+              </a>
+
             </div>
           </div>
         </div>
 
         <div className="border-t border-background/10 mt-12 pt-8">
           <p className="text-center text-background/50 text-xs">
-            © {new Date().getFullYear()} Hilton Art. All rights reserved.
+            © {new Date().getFullYear()} Hilton the Artist. All rights reserved.
           </p>
         </div>
       </div>

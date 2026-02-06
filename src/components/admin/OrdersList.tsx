@@ -6,7 +6,8 @@ import { toast } from 'sonner'
 import { createClient } from '@/lib/supabase/client'
 import { Button } from '@/components/ui/Button'
 import { formatPrice, formatDate, cn } from '@/lib/utils'
-import { Eye, ChevronDown, Calendar, Save } from 'lucide-react'
+import { Eye, ChevronDown } from 'lucide-react'
+import { Fragment } from 'react'
 import type { Order } from '@/types'
 
 interface OrdersListProps {
@@ -94,9 +95,8 @@ export function OrdersList({ orders }: OrdersListProps) {
         </thead>
         <tbody>
           {orders.map((order) => (
-            <>
+            <Fragment key={order.id}>
               <tr
-                key={order.id}
                 className="border-b border-foreground-muted/10 hover:bg-background-off transition-colors"
                 data-testid={`order-row-${order.id}`}
               >
@@ -219,8 +219,9 @@ export function OrdersList({ orders }: OrdersListProps) {
                     </div>
                   </td>
                 </tr>
+
               )}
-            </>
+            </Fragment>
           ))}
         </tbody>
       </table>

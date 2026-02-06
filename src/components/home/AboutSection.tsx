@@ -37,20 +37,20 @@ export function AboutSection() {
               About the Artist
             </p>
             <h2 className="heading-serif text-4xl md:text-5xl mb-8">
-              Hilton
+              Hilton Owuor
             </h2>
             <div className="space-y-6 text-foreground-secondary leading-relaxed">
               <p>
-                With over two decades of artistic exploration, I've dedicated my life to 
-                capturing the intangible—emotions, moments, and the spaces between thoughts.
+                Driven by a fascination with the stories written on the human face, 
+                Hilton Owuor specializes in hyper-realistic portraiture that bridges the gap between a photograph and a feeling.
               </p>
               <p>
-                My work draws from the rich traditions of abstract expressionism while 
-                incorporating contemporary techniques and perspectives. Each piece is a 
-                dialogue between intention and spontaneity.
+                With a masterly command over charcoal, graphite, and colored pencil, 
+                he transforms simple surfaces into deep explorations of texture 
+                from the intricate patterns of a braid to the reflective sheen of a leather jacket. 
               </p>
               <p className="accent-italic text-lg text-foreground">
-                "Art is not what you see, but what you make others see."
+                "Art is more than a likeness; it is an act of documenting the joy, pride, and quiet strength of the people who define our world."
               </p>
             </div>
           </motion.div>
