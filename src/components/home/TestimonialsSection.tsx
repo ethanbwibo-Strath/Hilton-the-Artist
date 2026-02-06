@@ -6,21 +6,21 @@ import { Quote } from 'lucide-react'
 const testimonials = [
   {
     id: 1,
-    text: "Hilton's work transformed our living space into a gallery. The depth of emotion in each brushstroke is truly remarkable.",
-    author: "Sarah Mitchell",
-    role: "Art Collector",
+    text: "We wanted something special to commemorate my daughter’s graduation. Hilton didn’t just draw her likeness; they captured the pride of the moment. It’s now the centerpiece of our living room.",
+    author: "Samueli Matandiko",
+    role: "Academic Portrait Commission",
   },
   {
     id: 2,
-    text: "Commissioning a piece was an incredible experience. Hilton understood my vision perfectly and exceeded all expectations.",
-    author: "James Chen",
-    role: "Private Commission",
+    text: "I commissioned a portrait as a gift, and the level of detail was breathtaking. From the texture of the clothing to the light in the eyes, it looked more 'alive' than the original photograph. Truly a master of the craft.",
+    author: "Anonymous",
+    role: "Verified Client",
   },
   {
     id: 3,
-    text: "The attention to detail and the emotional resonance of Hilton's art is unmatched. A true master of contemporary expression.",
-    author: "Elena Rodriguez",
-    role: "Gallery Director",
+    text: "There is a warmth in Hilton’s work that you don't find often. He has a gift for capturing the bond between people. The portrait of my children is something our family will treasure forever.",
+    author: "Gloria Muli",
+    role: "Family Portrait Client",
   },
 ]
 

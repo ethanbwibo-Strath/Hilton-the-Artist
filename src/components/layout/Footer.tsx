@@ -57,7 +57,7 @@ export function Footer() {
                 <Twitter size={20} />
               </a>
               <a
-                href="mailto:hello@hiltonart.com"
+                href="mailto:hiltonstans@gmail.com"
                 className="text-background/70 hover:text-background transition-colors"
                 aria-label="Email"
                 data-testid="social-email"
