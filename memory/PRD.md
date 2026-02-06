@@ -45,6 +45,7 @@ Build a full-stack web application for a professional visual artist using Next.j
 - [x] Order status management
 - [x] Filter artworks by category/availability
 - [x] Seed API for sample data
+- [x] **Featured Collection Banner** - Auto-rotating carousel showcasing available artworks with smooth animations
 
 ## Database Schema
 

@@ -147,12 +147,31 @@ export function TrackOrderForm() {
               </div>
             </div>
 
-            {order.estimated_completion && (
-              <div>
-                <p className="text-xs uppercase tracking-wider text-foreground-muted">Estimated Completion</p>
-                <p className="text-sm" data-testid="order-completion">{formatDate(order.estimated_completion)}</p>
+            {/* Estimated Completion - Highlighted Section */}
+            <div className="mt-6 pt-6 border-t border-foreground-muted/20">
+              <div className="flex items-start gap-3">
+                <div className="p-2 bg-blue-100 rounded-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                    <line x1="16" x2="16" y1="2" y2="6"/>
+                    <line x1="8" x2="8" y1="2" y2="6"/>
+                    <line x1="3" x2="21" y1="10" y2="10"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-foreground-muted mb-1">Estimated Completion</p>
+                  {order.estimated_completion ? (
+                    <p className="text-lg font-medium" data-testid="order-completion">
+                      {formatDate(order.estimated_completion)}
+                    </p>
+                  ) : (
+                    <p className="text-sm text-foreground-muted" data-testid="order-completion-pending">
+                      To be determined - We'll update this once your commission is reviewed
+                    </p>
+                  )}
+                </div>
               </div>
-            )}
+            </div>
           </div>
         </motion.div>
       )}
