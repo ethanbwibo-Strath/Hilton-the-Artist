@@ -58,7 +58,7 @@ Build a full-stack web application for a professional visual artist using Next.j
 | image_url | text | Image URL |
 | category | text | Category (Abstract, Portrait, etc.) |
 | price | numeric | Price in KES |
-| availability | text | Available/Sold/Commission Only |
+| availability | text | Available/Sold/Commission |
 | created_at | timestamp | Creation date |
 
 ### orders

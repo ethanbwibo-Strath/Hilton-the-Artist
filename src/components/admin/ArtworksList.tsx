@@ -18,7 +18,7 @@ interface ArtworksListProps {
 const availabilityColors = {
   'Available': 'bg-green-100 text-green-800',
   'Sold': 'bg-red-100 text-red-800',
-  'Commission Only': 'bg-amber-100 text-amber-800',
+  'Commission': 'bg-amber-100 text-amber-800',
 }
 
 export function ArtworksList({ artworks }: ArtworksListProps) {

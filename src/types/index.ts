@@ -5,7 +5,7 @@ export interface Artwork {
   image_url: string
   category: string
   price: number
-  availability: 'Available' | 'Sold' | 'Commission Only'
+  availability: 'Available' | 'Sold' | 'Commission'
   created_at: string
 }
 

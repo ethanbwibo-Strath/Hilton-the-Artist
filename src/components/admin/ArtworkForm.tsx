@@ -36,7 +36,7 @@ const categoryOptions = [
 const availabilityOptions = [
   { value: 'Available', label: 'Available' },
   { value: 'Sold', label: 'Sold' },
-  { value: 'Commission Only', label: 'Commission Only' },
+  { value: 'Commission', label: 'Commission' },
 ]
 
 export function ArtworkForm({ artwork }: ArtworkFormProps) {

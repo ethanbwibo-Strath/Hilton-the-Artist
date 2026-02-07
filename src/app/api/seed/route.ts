@@ -46,7 +46,7 @@ const sampleArtworks = [
     image_url: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80',
     category: 'Portrait',
     price: 4500,
-    availability: 'Commission Only',
+    availability: 'Commission',
   },
   {
     id: 'a1b2c3d4-6666-7777-8888-999999999999',

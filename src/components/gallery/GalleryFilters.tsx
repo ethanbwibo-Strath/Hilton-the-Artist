@@ -13,7 +13,7 @@ const availabilityOptions = [
   { value: 'all', label: 'All' },
   { value: 'Available', label: 'Available' },
   { value: 'Sold', label: 'Sold' },
-  { value: 'Commission Only', label: 'Commission Only' },
+  { value: 'Commission', label: 'Commission' },
 ]
 
 export function GalleryFilters({ categories, currentCategory, currentAvailability }: GalleryFiltersProps) {
