@@ -17,13 +17,13 @@ export function FeaturedBanner({ artworks }: FeaturedBannerProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
-  // Auto-rotate every 5 seconds
+  // Auto-rotate every 7 seconds
   useEffect(() => {
     if (!isAutoPlaying || artworks.length <= 1) return
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % artworks.length)
-    }, 5000)
+    }, 7000)
 
     return () => clearInterval(interval)
   }, [isAutoPlaying, artworks.length])
