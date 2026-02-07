@@ -74,6 +74,18 @@ export function Footer() {
               </a>
 
             </div>
+
+            <div className="mt-4">
+              <p className="text-xs uppercase tracking-wider text-background/50 mb-2">Made by</p> 
+              <a
+                href="https://ethan-bwibo.netlify.app/"
+                className="text-background/70 hover:text-background transition-colors text-sm"
+                data-testid="developer-link"
+              >
+                Ethan Bwibo
+              </a>
+            </div>
+            
           </div>
         </div>
 
