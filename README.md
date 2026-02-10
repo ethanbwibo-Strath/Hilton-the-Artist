@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Artist Portfolio & Commission Management System
 
-## Getting Started
+A full-stack web application built to serve as both:
 
-First, run the development server:
+1. A professional portfolio for showcasing artwork
+2. A commission management system for handling custom orders
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The system is actively deployed and structured to scale with additional features such as payments and revenue tracking.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌍 Live Application
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🔗 https://hiltonstudio.vercel.app
 
-## Learn More
+    https://hilton-the-artist.vercel.app
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Technology Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Frontend:
+- Next.js (App Router, TypeScript)
+- Tailwind CSS
 
-## Deploy on Vercel
+Backend:
+- Next.js Server Actions & API routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Database & Authentication:
+- Supabase (PostgreSQL)
+- Supabase Auth
+- Supabase Storage (image uploads)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployment:
+- Vercel
+
+---
+
+## ✨ Core Features
+
+### Public Features
+- Responsive artwork gallery
+- Artwork detail pages
+- Commission request submission
+- Order tracking system
+
+### Admin Features
+- Secure authentication
+- Artwork CRUD management
+- Order management dashboard
+- Status tracking
+- Image upload handling
+
+---
+
+## 🔐 Security Implementation
+
+- Supabase Row Level Security (RLS) enabled
+- Public read-only access for artwork listings
+- Authenticated access required for admin operations
+- Protected dashboard routes
+- Environment variables secured in deployment
+
+---
+
+## 🗄️ Database Design
+
+Relational PostgreSQL schema designed for scalability.
+
+### artworks
+Stores all published artwork.
+
+### orders
+Stores commission requests and lifecycle status.
+
+Schema designed to allow future integration of:
+- Payments
+- Revenue tracking
+- Role-based access control
+
+---
+
+## 📂 Architecture Overview
+
+The application follows a modular full-stack structure:
+
+- UI Components separated from business logic
+- Supabase client isolated in `/lib`
+- Server-side rendering for protected routes
+- Extendable API layer for future integrations
+
+---
+
+## 🚀 Future Enhancements
+
+- Payment integration
+- Earnings analytics dashboard
+- Email notifications
+- Role-based admin system
+- Artist blog module
+- Limited edition print management
+
+---
+
+## 🎯 Purpose
+
+This project demonstrates:
+
+- Production-ready full-stack development
+- Secure authentication & authorization
+- Database design & RLS implementation
+- Cloud deployment workflow
+- Real-world system architecture
+
+It serves as both a live production tool and a portfolio-grade engineering project.

@@ -38,15 +38,15 @@ CREATE INDEX IF NOT EXISTS idx_orders_status ON orders(status);
 CREATE INDEX IF NOT EXISTS idx_orders_customer_email ON orders(customer_email);
 
 -- Enable Row Level Security (optional - can disable for simpler setup)
--- ALTER TABLE artworks ENABLE ROW LEVEL SECURITY;
--- ALTER TABLE orders ENABLE ROW LEVEL SECURITY;
+ ALTER TABLE artworks ENABLE ROW LEVEL SECURITY;
+ ALTER TABLE orders ENABLE ROW LEVEL SECURITY;
 
--- Create policies for public read access to artworks
--- CREATE POLICY "Public read access" ON artworks FOR SELECT USING (true);
+ Create policies for public read access to artworks
+ CREATE POLICY "Public read access" ON artworks FOR SELECT USING (true);
 
 -- Create policy for authenticated users to manage artworks
--- CREATE POLICY "Authenticated users can manage artworks" ON artworks
---   FOR ALL USING (auth.role() = 'authenticated');
+ CREATE POLICY "Authenticated users can manage artworks" ON artworks
+   FOR ALL USING (auth.role() = 'authenticated');
 
 -- Create storage bucket for artworks images
 INSERT INTO storage.buckets (id, name, public) 
