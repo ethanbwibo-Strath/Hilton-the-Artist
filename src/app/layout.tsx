@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Manrope, Cormorant_Garamond } from "next/font/google";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -39,6 +40,7 @@ export default function RootLayout({
       >
         {children}
         <Toaster position="bottom-right" richColors />
+        <Analytics />
       </body>
     </html>
   );
