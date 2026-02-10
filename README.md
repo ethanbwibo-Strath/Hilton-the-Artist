@@ -13,8 +13,7 @@ The system is actively deployed and structured to scale with additional features
 
 🔗 https://hiltonstudio.vercel.app
 
-    https://hilton-the-artist.vercel.app
-
+([https://hilton-the-artist.vercel.app](https://hilton-the-artist.vercel.app))
 ---
 
 ## 🛠️ Technology Stack
