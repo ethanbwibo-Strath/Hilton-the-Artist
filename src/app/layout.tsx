@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   siteName: "Hilton the Artist",
   images: [
     {
-      url: "public\\og-image.png",
+      url: "/og-image.png",
       width: 1200,
       height: 630,
       alt: "Hilton the Artist - Original Artwork and Commissions",

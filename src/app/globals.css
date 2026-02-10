@@ -79,18 +79,9 @@ html {
 
 /* Glass morphism */
 .glass {
-  /* Increased blur and added saturation for that "liquid" feel */
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-}
-
-/* Add a custom border that looks like a highlight on glass */
-.glass-border {
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 
-    0 8px 32px 0 rgba(0, 0, 0, 0.08),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* Hide scrollbar but allow scrolling */
