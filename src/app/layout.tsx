@@ -25,7 +25,31 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: "Hilton the Artist | Artist",
-  description: "Discover the captivating artwork of Hilton. Original paintings, commissions, and fine art prints.",
+  description: "Discover the captivating artwork of Hilton. Original drawings, commissions, and fine art prints.",
+  keywords: [
+    "artist",
+    "portrait commissions",
+    "custom artwork",
+    "Kenyan artist"
+  ],
+  authors: [{ name: "Hilton" }],
+
+  openGraph: {
+  title: "Hilton the Artist | Artist",
+  description:
+    "Explore original artwork and commission custom illustrations.",
+  url: "https://hiltonstudio.vercel.app",
+  siteName: "Hilton the Artist",
+  images: [
+    {
+      url: "/og-image.png",
+      width: 1200,
+      height: 630,
+      alt: "Hilton the Artist - Original Artwork and Commissions",
+    },
+  ],
+  type: "website",
+},
 };
 
 export default function RootLayout({

@@ -65,10 +65,10 @@ Deployment:
 
 Relational PostgreSQL schema designed for scalability.
 
-### artworks
+### Artworks
 Stores all published artwork.
 
-### orders
+### Orders
 Stores commission requests and lifecycle status.
 
 Schema designed to allow future integration of:
@@ -111,3 +111,4 @@ This project demonstrates:
 - Real-world system architecture
 
 It serves as both a live production tool and a portfolio-grade engineering project.
+And I hope Hilton will love it and use it 🙌
