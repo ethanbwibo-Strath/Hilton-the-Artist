@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 export function AboutSection() {
-  return (
+  return ( 
     <section className="py-32 bg-background-off" data-testid="about-section">
       <div className="max-w-7xl mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -17,8 +17,8 @@ export function AboutSection() {
             className="relative aspect-[4/5] rounded-sm overflow-hidden"
           >
             <Image
-              src="https://images.unsplash.com/photo-1608146145692-0583f7d6bfdb?w=800&q=80"
-              alt="Artist in studio"
+              src="/hilton.jpg"
+              alt="Hilton Owuor Portrait"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
