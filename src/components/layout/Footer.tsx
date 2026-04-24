@@ -78,7 +78,7 @@ export function Footer() {
             <div className="mt-4">
               <p className="text-xs uppercase tracking-wider text-background/50 mb-2">Made by</p> 
               <a
-                href="https://ethan-bwibo.netlify.app/"
+                href="https://ethan-bwibo.vercel.app/"
                 className="text-background/70 hover:text-background transition-colors text-sm"
                 data-testid="developer-link"
               >
